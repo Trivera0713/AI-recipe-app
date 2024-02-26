@@ -11,22 +11,25 @@
   <body>
     <div class="container">
       <header>
-        <h1>Welcome to the AI Recipe Generator</h1>
+        <h1>AI Recipe Generator</h1>
       </header>
       <main>
-        <form id="recipe-generator">
-          <input
-            type="text"
-            placeholder="Enter the ingredients you have available"
-            autofocus
-            required
-            autocomplete="off"
-            class="instructions"
-            id="user-list"
-          />
-          <input type="submit" class="button" />
-        </form>
-        <div class="recipe" id="recipe"></div>
+        <div class="form-container">
+          <form id="recipe-generator">
+            <input
+              type="text"
+              placeholder="Enter the ingredients you have available"
+              autofocus
+              required
+              autocomplete="off"
+              class="instructions"
+              id="user-list"
+            />
+            <input type="submit" class="button" />
+          </form>
+          <div class="hint">i.e. Eggs, Butter, Rice</div>
+        </div>
+        <div class="recipe hidden" id="recipe"></div>
       </main>
 
       <footer>
