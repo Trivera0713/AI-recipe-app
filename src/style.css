@@ -1,90 +1,150 @@
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
+  background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+  background-size: cover;
 }
 .container {
+  background-image: linear-gradient(to top, #f6f3ff 0%, #cd9cf2 100%);
   margin: 120px auto;
-  max-width: 720px;
+  max-width: 960px;
   border-radius: 10px;
 }
 header {
   margin-bottom: 30px;
   padding-top: 20px;
 }
-
+main {
+  padding: 10px 0;
+}
 h1 {
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
-  font-size: 50px;
+  color: white;
+  text-shadow: #272844;
+  font-size: 80px;
   text-align: center;
   margin-top: 5px;
   margin-bottom: 25px;
   line-height: 1.5;
-  border-bottom: 1px solid rgba(221, 133, 221, 0.5);
+  border-bottom: 5px solid white;
 }
 .form-container {
   padding: 30px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0px 20px 60px rgba(7, 7, 8, 0.189);
   border-radius: 10px;
-  margin: 30px;
+  margin: 40px 50px;
 }
 .glow-container {
-  width: 678px;
-  height: 155px;
+  width: 900px;
+  height: 200px;
   position: absolute;
-  margin-top: -8px;
-  margin-left: 20px;
-  opacity: 0;
+  margin-top: 32px;
+  margin-left: 40px;
+  border-radius: 12px;
+}
+.glow-line,
+.glow-blur {
+  stroke: #ffffff;
+  stroke-dasharray: 14px;
+  stroke-dashoffset: 0;
+  fill: transparent;
+  animation: glow 35s infinite linear;
+}
+.glow-line {
+  stroke-width: 4px;
+  height: 168px;
+  width: 876px;
+}
+.glow-blur {
+  height: 168px;
+  width: 876px;
+  stroke: #ffffff;
+  stroke-width: 8px;
+  fill: transparent;
+  filter: blur(6px);
 }
 
 form {
   display: flex;
 }
+#user-list {
+  border-color: rgb(165, 102, 175);
+}
+
 .hint {
   line-height: 1.5;
   margin-top: 5px;
-  opacity: 0.6;
-  font-size: 12px;
+  opacity: 0.8;
+  font-size: 20px;
 }
 .instructions {
   padding: 16px;
   border: 1px solid rgba(39, 33, 56, 0.5);
   width: 80%;
-  font-size: 16px;
+  font-size: 22px;
   border-radius: 50px;
   line-height: 20px;
   color: #272844;
 }
 .button {
-  font-size: 16px;
+  font-size: 20px;
   margin-left: 10px;
-  background: gray;
+  color: white;
+  font-weight: bolder;
+  background: #cd9cf2;
   border: none;
   width: 150px;
   border-radius: 50px;
   padding: 14px 24px;
+  outline: 2px solid white;
+  box-shadow: 0px 10px 10px rgba(95, 35, 140, 0.6);
 }
+
 .recipe {
-  font-size: 16px;
-  background-color: white;
+  margin: 0 50px;
+  font-size: 22px;
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
   line-height: 24px;
-  border-left: 3px solid gray;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+}
+.recipe h1 {
+  font-size: 60px;
+  color: #562c76;
 }
 .hidden {
   display: none;
 }
 footer {
   text-align: center;
-  font-size: 13px;
+  font-size: 20px;
   margin-top: 30px;
 }
+footer a {
+  color: #562c76;
+}
+
 .generating {
+  font-size: 20px;
+  background-color: none;
   animation: blink 1s steps(6, start) infinite;
 }
 @keyframes blink {
   75% {
     opacity: 0;
+  }
+}
+@keyframes glow {
+  to {
+    stroke-dashoffset: 1000;
+  }
+  0%,
+  75% {
+    opacity: 1;
+  }
+  25%,
+  100% {
+    opacity: 0.5;
   }
 }
