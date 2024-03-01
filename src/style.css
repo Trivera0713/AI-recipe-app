@@ -35,35 +35,6 @@ h1 {
   border-radius: 10px;
   margin: 40px 50px;
 }
-.glow-container {
-  width: 900px;
-  height: 200px;
-  position: absolute;
-  margin-top: 32px;
-  margin-left: 40px;
-  border-radius: 12px;
-}
-.glow-line,
-.glow-blur {
-  stroke: #ffffff;
-  stroke-dasharray: 14px;
-  stroke-dashoffset: 0;
-  fill: transparent;
-  animation: glow 35s infinite linear;
-}
-.glow-line {
-  stroke-width: 4px;
-  height: 168px;
-  width: 876px;
-}
-.glow-blur {
-  height: 168px;
-  width: 876px;
-  stroke: #ffffff;
-  stroke-width: 8px;
-  fill: transparent;
-  filter: blur(6px);
-}
 
 form {
   display: flex;
@@ -127,24 +98,13 @@ footer a {
 
 .generating {
   font-size: 20px;
+  text-align: center;
+  color: #562c76;
   background-color: none;
   animation: blink 1s steps(6, start) infinite;
 }
 @keyframes blink {
   75% {
     opacity: 0;
-  }
-}
-@keyframes glow {
-  to {
-    stroke-dashoffset: 1000;
-  }
-  0%,
-  75% {
-    opacity: 1;
-  }
-  25%,
-  100% {
-    opacity: 0.5;
   }
 }
